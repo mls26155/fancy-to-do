@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const ToDoList = () => {
 
-    const [tasks, setTasks] = useState(["Wake Up"])
+    const [tasks, setTasks] = useState(["Go to the gym"])
     const [newTask, setNewTask] = useState("")
 
     const handleNewTask = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +49,7 @@ const ToDoList = () => {
             <div>
                 <ol>
                     {tasks.map((task: string, index: number) => (
-                        <li key={index} className="bg-white text-black m-2 px-12 py-2 rounded-xl font-bold text-xl">
+                        <li key={index} className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-white text-black m-2 px-12 py-2 rounded-xl font-bold text-xl text-right">
                             <span className="p-2">{task}</span>
 
                             <button className="p-2 bg-red-600 rounded text-white" onClick={() => deleteTask(index)}>Delete</button>
